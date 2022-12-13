@@ -6,7 +6,7 @@ Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
-    path: '/inicio',
+    path: '/',
     name: 'inicio',
 
     component: () => import('../views/inicio/Menu.vue')

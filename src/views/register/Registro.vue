@@ -33,22 +33,24 @@
                 </div>
 
                 <div class="esquerda">
-                <label class="password-confirmation" id="labelConfirmSenha" for="password-confirmation">Confirmação de senha<i
-                    id="verConfirmSenha"
-                    class="fa fa-eye"
-                    aria-hidden="true"></i></label>
-                <input class="password-confirmation" id="confirmSenha" type="password" v-model="user.confirmacaoSenha" placeholder="inisira sua senha novamente..." required />
+                    <label class="password-confirmation" id="labelConfirmSenha" for="password-confirmation">Confirmação de senha<i
+                        id="verConfirmSenha"
+                        class="fa fa-eye"
+                        aria-hidden="true"></i></label>
+                    <input class="password-confirmation" id="confirmSenha" type="password" v-model="user.confirmacaoSenha" placeholder="inisira sua senha novamente..." required />
                 </div>
 
                 <input class="button" type="submit" value="Cadastrar" @click="onClickCadastrar()" />
 
                 <h6 class="login">
-                Já posuí cadastro? Faça seu
-                <a href="../../LOGIN/Find-Your-Point/index.html"><span>Login</span></a>
+                    Já posuí cadastro? Faça seu
+                    <router-link to="/login">
+                        <span>Login</span>
+                    </router-link>
                 </h6>
                 <h6 class="tela-inicial">
-                Ou explore nossa<a href="../../index.html">
-                <span>Tela inicial</span></a>
+                    Ou explore nossa<a href="../">
+                    <span>Tela inicial</span></a>
                 </h6>
             </form>
         </div>
@@ -109,6 +111,7 @@ template{
 }
 .container{
     margin-left: 15%;
+    margin-top: 5%;
 }
 span {
     color: #598659;
