@@ -22,13 +22,8 @@
         src="../../assets/tela centro esquerda.png"
       />
       <img
-        alt="telacentrodereito"
-        class="img5-background"
-        src="../../assets/tela centro direito.png"
-      />
-      <img
         alt="footerdereito"
-        class="img6-background"
+        class="img5-background"
         src="../../assets/tela footer direito.png"
       />
     </div>
@@ -57,9 +52,9 @@
 
         <div class="Pag1-Botoes">
           <a href="../login"><button class="b-login">Login</button></a>
-          <a href="../cadastro"
-            ><button class="b-cadastro">Cadastre-se</button></a
-          >
+          <router-link to="/register">
+            <button class="b-cadastro">Cadastre-se</button>
+          </router-link>
         </div>
       </div>
 
@@ -88,18 +83,20 @@
                 <div class="textocards">
                   <h2>Que tal uma bebida?</h2>
                 </div>
+
                 <div class="cards-icons">
                   <div class="icones-class">
                     <ion-icon name="beer-outline"></ion-icon>
                   </div>
-                  <div class="icones-class">
+                <div class="icones-class">
                     <ion-icon name="fast-food-outline"></ion-icon>
-                  </div>
-
-                  <div class="icones-class">
-                    <ion-icon name="musical-notes-outline"></ion-icon>
-                  </div>
                 </div>
+
+                <div class="icones-class">
+                  <ion-icon name="musical-notes-outline"></ion-icon>
+                </div>
+              </div>
+
                 <div class="cards-botton">
                   <button class="explorebtn">
                     <a href="#explore">Explore</a>
@@ -302,8 +299,7 @@
                         <option
                           :value="item"
                           v-for="item in localList"
-                          :key="item.id"
-                        >
+                          :key="item.id">
                           {{ item.nome }}
                         </option>
                       </select>
@@ -395,35 +391,36 @@ template {
 .background-img {
   z-index: -99;
   position: absolute;
-  height: 100%;
-  width: 100%;
   flex-wrap: nowrap;
 }
 
 .img1-background {
-  position: absolute;
+  position: fixed;
   left: -10%;
+  top: 10%;
 }
 
 .img2-background {
-  position: absolute;
-  left: 80%;
+  position: fixed;
+  left: 75%;
+  top: -2%;
+  z-index: -5;
 }
 
 .img3-background {
-  position: absolute;
+  position: fixed;
   top: 55%;
   left: 40%;
 }
 
 .img4-background {
-  position: absolute;
+  position: fixed;
   left: -1%;
-  top: 75%;
+  top: 72%;
 }
 
 .img5-background {
-  position: absolute;
+  position: fixed;
   left: 82%;
   top: 75%;
 }
@@ -662,7 +659,7 @@ button {
   /* align-items: flex-start; */
   width: 315px;
   /* height: 338px; */
-  height: 250px;
+  height: 243px;
   /* height: 500px; */
   overflow: hidden;
   transition: 0.5s;
@@ -767,6 +764,7 @@ button {
 /*TELA 02*/
 
 .Pag2-Explorar {
+  margin-top: 15%;
   background: rgba(217, 217, 217, 0.29);
   border: 2px solid #000000;
   backdrop-filter: blur(4px);
@@ -794,7 +792,7 @@ button {
   justify-content: center;
   align-items: center;
   margin-top: 5%;
-  margin-left: 16%;
+  margin-left: 13%;
   position: absolute;
 }
 
@@ -907,8 +905,11 @@ button {
 }
 
 .footerpag {
-  width: 100%;
-  height: 50vh;
+    margin-top: 11%;
+    margin-left: 2%;
+    width: 95%;
+    height: 50vh;
+    position: relative;
 }
 
 footer {

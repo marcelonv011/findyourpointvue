@@ -22,7 +22,7 @@ const routes: Array<RouteConfig> = [
     name: 'register',
 
     component: () => import('../views/register/Registro.vue')
-  },
+  }, 
   {
     path: '/favorite',
     name: 'favorite',

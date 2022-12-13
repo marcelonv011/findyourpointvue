@@ -38,6 +38,7 @@ export class UserClient {
             return (await this.axiosClient.post(``, user)).data
         }
         catch(error:any){
+            console.log(error)
             return Promise.reject(error.response)
         }
     }

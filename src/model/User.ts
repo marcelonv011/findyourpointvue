@@ -6,7 +6,9 @@ export class User extends AbstractEntity {
 
     nome!: string
     senha!: string
+    confirmacaoSenha!: string
     email!: string
+    cpf!: string
     listaComentario!: Comentario
     listaFavoritado!: Favoritado
 

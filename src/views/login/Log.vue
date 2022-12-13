@@ -9,10 +9,6 @@
 
 import { Vue, Component } from "vue-property-decorator";
 
-@Component
-export default class FleteListView extends Vue {
-
-}
     
 </script>
     
